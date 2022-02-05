@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: 0.6.0
+appVersion: 0.6.2
 description: Dendrite Matrix Homeserver
 name: dendrite
-version: 2.0.0
+version: 2.0.1
 kubeVersion: ">=1.16.0-0"
 keywords:
   - dendrite
@@ -18,6 +18,8 @@ sources:
 maintainers:
   - name: jonnobrow
     email: jonathan@jonnobrow.co.uk
+  - name: S7evinK
+    email: tfaelligen@gmail.com
 dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com
@@ -33,6 +35,8 @@ dependencies:
 annotations:
   artifacthub.io/changes: |
     - kind: changed
-      description: NATS is now used instead of Kafka
-    - kind: changed
-      description: App version bumped to v0.6.0
+      description: App version bumped to v0.6.2
+    - kind: fixed
+      description: NATS JetStream dependency is correctly deployed
+    - kind: fixed
+      description: Dendrite config now uses correct version

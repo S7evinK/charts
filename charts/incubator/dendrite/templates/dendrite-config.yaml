@@ -10,7 +10,7 @@ metadata:
 type: Opaque
 stringData:
   dendrite.yaml: |
-    version: 1
+    version: 2
     global:
       server_name: {{ required "A server_name must be provided." .Values.dendrite.global.server_name | quote }}
       private_key: matrix_key.pem
